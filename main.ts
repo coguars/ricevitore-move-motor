@@ -68,3 +68,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 let speed = 0
 speed = 50
 radio.setGroup(100)
+basic.forever(function () {
+    Kitronik_Move_Motor.setUltrasonicUnits(Kitronik_Move_Motor.Units.Centimeters)
+    if (Kitronik_Move_Motor.measure() <= 5 && Kitronik_Move_Motor.measure() != 0) {
+        Kitronik_Move_Motor.stop()
+    }
+})
