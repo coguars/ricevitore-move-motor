@@ -62,7 +62,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else if (receivedNumber == 6) {
         speed = 50
     } else if (receivedNumber == 7) {
-        speed = 100
+        speed = 75
     }
 })
 let speed = 0
